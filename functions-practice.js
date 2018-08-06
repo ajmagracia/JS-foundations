@@ -57,7 +57,7 @@ console.log('Exercise 5')
 function multiply(num1, num2) {
   console.log(num1 * num2)
 }
-multiply(randomNumber)
+multiply(randomNumber, randomNumber2)
 //
 // Exercise 6
 //
