@@ -92,7 +92,7 @@ describeProduct(product)
 console.log('Exercise 8')
 // Consider this function:
 function message(product, inBudget) {
-  if (result) {
+  if (inBudget) {
     console.log("Product is within budget")
     return "Product is within budget"
   } else {
@@ -108,16 +108,14 @@ var product = {
 var budget = 275.00
 // Write a function checkBudget that takes a product, budget and the message function as arguments, determines whether the product is within budget and returns the result of the message function.
 //create result variable necessary for message function
-var result
 
-function checkBudget(product, inBudget, funct) {
+function checkBudget(product, budget, funct) {
   //check whether the product is within budget
-  if (product.price <= inBudget) {
-    result = true
+  if (product.price <= budget) {
+    funct(product, true)
   } else {
-    result = false
+    funct(product, false)
   }
-  funct(product, inBudget)
 }
 checkBudget(product, budget, message)
 //
@@ -128,12 +126,12 @@ checkBudget(product, budget, message)
 console.log('Exercise 9')
 
 function message2(product, inBudget) {
-  if (result) {
-    console.log(product.name + " is within budget")
-    return product.name + " is within budget"
+  if (inBudget) {
+    console.log(`${product.name} is within budget`)
+    return `${product.name} is within budget`
   } else {
-    console.log(product.name + " is beyond budget")
-    return product.name + " is within budget"
+    console.log(`${product.name} is beyond budget`)
+    return `${product.name} is beyond budget`
   }
 }
 checkBudget(product, budget, message2)

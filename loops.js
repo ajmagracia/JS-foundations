@@ -4,7 +4,7 @@
 
 // This is the most common type of loop you will see used in javascript. It gives you the most control over how you are iterating over items by letting you define:
 
-// 1. Where the count (index) starts 
+// 1. Where the count (index) starts
 // 2. When the function should end (a condition that at some point returns false)
 // 3. What to do after each loop
 
@@ -43,7 +43,7 @@
 // 	currentIssues: ["Tribbles"]
 // }
 //
-// for(let x in spaceship){ 
+// for(let x in spaceship){
 // 	console.log("this spaceship has a " + x + " " + spaceship[x])
 // }
 

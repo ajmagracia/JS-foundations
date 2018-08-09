@@ -4,9 +4,9 @@
 // We can console.log and return something from the same function.
 // There can be as many console.logs as we want, but javascript only allows one return
 
-var myfunc = function(){
-	console.log("hi")
-	return 1+1
+var myfunc = function () {
+  console.log("hi")
+  return 1 + 1
 }
 
 // When we run this, we see both "hi" and 2
@@ -37,11 +37,11 @@ console.log(savedvalue)
 
 // the second really important thing about return is that it immediately ends a function.
 
-var myfunc2 = function(){
-	var num = 1
-	return num + num
-	num = 6
-	console.log(num)
+var myfunc2 = function () {
+  var num = 1
+  return num + num
+  num = 6
+  console.log(num)
 }
 
 // nothing after the return will be read by javascript - lines 43 and 44 will not be computed
