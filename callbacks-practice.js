@@ -10,7 +10,7 @@ var sites = ["codepen.io", "codecademy.com", "coursera.org", "egghead.io", "udem
 console.log('Exercise 1')
 
 function dotCom(string) {
-  var includeCom = string.includes('.com')
+  let includeCom = string.includes('.com')
   console.log(includeCom)
   return includeCom
 }
@@ -22,7 +22,7 @@ for (i = 0; i < sites.length; i++) {
 console.log('Exercise 2')
 
 function dotIo(string) {
-  var includeIo = string.includes('.io')
+  let includeIo = string.includes('.io')
   console.log(includeIo)
   return includeIo
 }
@@ -34,9 +34,9 @@ for (i = 0; i < sites.length; i++) {
 console.log('Exercise 3')
 
 function dotOrg(string) {
-  var includeOrg = string.includes('.org')
-  console.log(includeOrg)
-  return includeOrg
+  console.log(string.includes('.org'))
+  return string.includes('.org')
+
 }
 for (i = 0; i < sites.length; i++) {
   dotOrg(sites[i])
@@ -50,6 +50,7 @@ function loopOver(array, funct) {
     funct(array[i])
   }
 }
+
 // Exercise 5
 // Call your loopOver function to find all ".com" websites in the sites array.
 console.log('Exercise 5')
@@ -66,3 +67,19 @@ loopOver(sites, dotOrg)
 // Now, instead of your home made loopOver function, use an array method that takes your dotCom function as a callback and returns the ".com" sites from the array.
 console.log('Exercise 8')
 sites.forEach(dotCom)
+
+// more reusable code
+console.log('Testtestesttestest')
+function dotWhat(string, tld) {
+  console.log(string.includes(tld))
+  return string.includes(tld)
+
+}
+
+function loopOver2(array, tld, funct) {
+  for (i = 0; i < array.length; i++) {
+    funct(array[i], tld)
+  }
+}
+
+loopOver2(sites, '.com', dotWhat)
